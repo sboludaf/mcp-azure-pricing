@@ -1,0 +1,42 @@
+# ============================================
+# CONFIGURACIÓN OBLIGATORIA
+# ============================================
+
+# Configuración del servidor MCP (obligatorio)
+MCP_HOST=0.0.0.0  # Dirección IP para escuchar (ej: 0.0.0.0 para todas las interfaces)
+MCP_PORT=8080      # Puerto para el servidor
+
+# Configuración de Azure Retail Prices API (obligatorio)
+MCP_AZURE_RETAIL_PRICES_URL=https://prices.azure.com/api/retail/prices
+MCP_AZURE_API_VERSION=2023-01-01-preview
+
+# Configuración de cálculos (obligatorio)
+MCP_HOURS_IN_MONTH=730  # Horas en un mes (aprox. 24/7)
+
+# Configuración de alternativas (obligatorio)
+MCP_MAX_ALTERNATIVES_TO_SHOW=3  # Número máximo de alternativas a mostrar
+
+# Configuración de precios (obligatorio)
+MCP_PRICE_TYPE=Consumption  # Tipo de precio (ej: 'Consumption')
+
+# ============================================
+# CONFIGURACIÓN OPCIONAL
+# ============================================
+
+# Configuración de CORS (opcional, separar orígenes por comas)
+MCP_CORS_ORIGINS=*
+
+# Nivel de logging (opcional, valores: DEBUG, INFO, WARNING, ERROR, CRITICAL)
+MCP_LOG_LEVEL=INFO
+
+# Modo desarrollo (opcional)
+MCP_DEBUG=true     # Habilita el modo debug
+MCP_RELOAD=false     # Recarga automática en desarrollo
+
+# ============================================
+# NOTAS
+# ============================================
+# 1. Todas las variables marcadas como (obligatorio) deben tener un valor
+# 2. Las cadenas no necesitan comillas
+# 3. Los valores booleanos deben ser 'true' o 'false' (minúsculas)
+# 4. Para múltiples orígenes CORS, separar por comas: http://localhost:3000,http://otro-dominio.com
